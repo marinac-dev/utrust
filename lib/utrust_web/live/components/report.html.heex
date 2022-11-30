@@ -1,0 +1,29 @@
+<div class="flex flex-col bg-gray-50 p-4">
+  <div class="flex flex-row space-x-4">
+    <span class="w-32">Block Hash:</span> <span> <%= @data.block_hash %> </span>
+  </div>
+  <div class="flex flex-row space-x-4">
+    <span class="w-32">Transaction Hash:</span> <span><%= @data.txh_hash %></span>
+  </div>
+  <div class="flex flex-row space-x-4">
+    <span class="w-32">From:</span> <span><%= @data.from %></span>
+  </div>
+  <div class="flex flex-row space-x-4">
+    <span class="w-32">To:</span> <span><%= @data.to %></span>
+  </div>
+  <div class="flex flex-row space-x-4">
+    <span class="w-32">Value:</span> <span><%= @data.value %> Eth</span>
+  </div>
+  <div class="flex flex-row space-x-4">
+    <span class="w-32">Transaction Block:</span> <span><%= @data.txh_block_number %></span>
+  </div>
+
+  <div class="flex flex-row space-x-4">
+    <span class="w-32">Status:</span>
+    <%= if @data.status == "pending" do %>
+      <span class="bg-yellow-300 px-2 rounded-lg text-white">Pending</span>
+    <% else %>
+      <span class="bg-green-300 px-2 rounded-lg text-white">Complete</span>
+    <% end %>
+  </div>
+</div>

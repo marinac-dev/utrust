@@ -1,0 +1,19 @@
+<section class="w-full h-full flex flex-col space-y-4">
+  <h1 class="w-full text-center text-4xl font-mono text-gray-900">Payment simulator</h1>
+
+  <article class="w-full h-full grid place-items-center px-10">
+    <.form let={f} for={:form} phx-submit="check-thx" class="flex flex-col bg-gray-50 p-4">
+      <%= label f, :txn_hash, "ETH transaction hash", class: "text-gray-600 mb-1" %>
+      <%= text_input f, :txn_hash, class: "appearance-none shadow rounded border-0 w-72 px-1" %>
+      <%= error_tag f, :txn_hash %>
+
+      <%= submit "Check", class: "bg-blue-500 text-white w-32 rounded mt-4 mx-auto" %>
+    </.form>
+  </article>
+  
+  <%= if @data do %>
+    <article class="w-full h-full grid place-items-center px-10">
+      <%= live_component(Report, data: @data) %>
+    </article>
+  <% end %>
+</section>

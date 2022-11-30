@@ -18,12 +18,15 @@ defmodule UtrustWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    live "/txn_hash", Live.Blockchain
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", UtrustWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", UtrustWeb.Api do
+    pipe_through :api
+
+    post "/tx_hash", BlockchainController, :check_transaction
+  end
 
   # Enables LiveDashboard only for development
   #
