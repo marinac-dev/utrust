@@ -7,17 +7,17 @@
   border-radius: 4px;
 }
 .alert-info {
-  color: #31708f;
+  color: #358cb8;
   background-color: #d9edf7;
   border-color: #bce8f1;
 }
 .alert-warning {
-  color: #8a6d3b;
+  color: #c09345;
   background-color: #fcf8e3;
   border-color: #faebcc;
 }
 .alert-danger {
-  color: #a94442;
+  color: #d34c4a;
   background-color: #f2dede;
   border-color: #ebccd1;
 }
@@ -28,7 +28,7 @@
   display: none;
 }
 .invalid-feedback {
-  color: #a94442;
+  color: #d34c4a;
   display: block;
   margin: -1rem 0 2rem;
 }

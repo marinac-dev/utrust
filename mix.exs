@@ -46,7 +46,8 @@ defmodule Utrust.MixProject do
       {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
-      {:tailwind, "~> 0.1.6", only: :dev}
+      {:tailwind, "~> 0.1.6", only: :dev},
+      {:tesla, "~> 1.4"}
     ]
   end
 
